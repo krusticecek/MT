@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MT</string>
+    <string name="load_fact">Load fact!</string>
+    <string name="new_fact">New Fact</string>
 </resources>
