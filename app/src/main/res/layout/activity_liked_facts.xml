@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
 
+    <!-- ImageView jako pozadí celé obrazovky -->
     <ImageView
-        android:id="@+id/ivSplashLogo"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:src="@drawable/splash_logo"
-        android:scaleType="centerInside"
         android:importantForAccessibility="no" />
 
-    <!-- ScrollView pro zobrazení oblíbených faktů s průhledným pozadím -->
+    <!-- ScrollView bude obsahovat TextView pro zobrazení faktů -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnBack"
+        android:layout_marginBottom="20dp">
         <TextView
             android:id="@+id/tvLikedFacts"
             android:layout_width="match_parent"
@@ -28,4 +30,14 @@
             android:textSize="16sp" />
     </ScrollView>
 
-</FrameLayout>
+    <!-- Tlačítko pro návrat zpět bude umístěno na spodní části obrazovky -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

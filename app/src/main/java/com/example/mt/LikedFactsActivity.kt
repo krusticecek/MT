@@ -3,6 +3,8 @@ package com.example.mt
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.Button
+
 
 class LikedFactsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,5 +16,10 @@ class LikedFactsActivity : AppCompatActivity() {
         val likedFacts = repository.getLikedFacts().joinToString("\n\n")
 
         tvLikedFacts.text = likedFacts
+
+        val btnBack = findViewById<Button>(R.id.btnBack)
+        btnBack.setOnClickListener {
+            finish() // Volání metody finish() ukončí aktivitu a vrátí se zpět na MainActivity.
+        }
     }
 }
