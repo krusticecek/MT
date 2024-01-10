@@ -2,4 +2,6 @@
     <string name="app_name">MT</string>
     <string name="load_fact">Load fact!</string>
     <string name="new_fact">New Fact</string>
+    <string name="liked_facts">liked_facts</string>
+    <string name="liked_facts_will_appear_here">Liked facts will appear here</string>>
 </resources>
